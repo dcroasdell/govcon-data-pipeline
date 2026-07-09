@@ -1,0 +1,23 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Data files (don't commit raw data or databases)
+data/raw/
+*.duckdb
+
+# Environment/secrets
+.env
+
+# Airflow / Astro specific
+airflow_project/.astro/
+airflow_project/logs/
+airflow_settings.yaml
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+webserver_config.py
+.DS_Store
+airflow_project/include/data/
+logs/

@@ -1,0 +1,8 @@
+﻿govcon_dbt:
+  outputs:
+    dev:
+      type: duckdb
+      path: /usr/local/airflow/include/data/govcon.duckdb
+      threads: 1
+
+  target: dev
