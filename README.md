@@ -4,6 +4,7 @@ A full-stack data engineering pipeline that extracts federal contract award data
 
 Built as a hands-on portfolio project to demonstrate the modern data stack (Python → DuckDB → dbt → Airflow → BI) applied to a real-world GovCon (government contracting) domain.
 
+Utilized Claude for optimization, error assistance and comments on code
 
 Architecture
 
