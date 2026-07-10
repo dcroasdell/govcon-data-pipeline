@@ -33,8 +33,7 @@ def fetch_page(page_number):
 
 def fetch_all_pages(max_pages=5):
     """
-    max_pages caps how many pages we pull — start small (5) to test,
-    increase once you know it works.
+    max_pages caps how many pages we pull.
     """
     all_results = []
     page = 1
