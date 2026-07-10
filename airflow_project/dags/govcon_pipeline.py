@@ -3,7 +3,7 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime
 
 default_args = {
-    "owner": "dima",
+    "owner": "airflow",
     "retries": 1,
 }
 
