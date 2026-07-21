@@ -19,11 +19,14 @@ def fetch_page(page_number):
                 {"start_date": "2024-01-01", "end_date": "2024-12-31"}
             ]
         },
-        "fields": [
-            "Award ID", "Recipient Name", "Award Amount",
-            "Awarding Agency", "Awarding Sub Agency",
-            "Start Date", "End Date", "NAICS Code", "NAICS Description"
-        ],
+            "fields": [
+                "Award ID", "Recipient Name", "Award Amount",
+                "Awarding Agency", "Awarding Sub Agency",
+                "Funding Agency", "Funding Sub Agency",
+                 "Place of Performance State Code",
+                "Description", "Contract Award Type",
+                "Start Date", "End Date", "NAICS Code", "NAICS Description"
+            ],
         "page": page_number,
         "limit": 100  # max allowed per page is usually 100
     }
@@ -31,7 +34,7 @@ def fetch_page(page_number):
     response.raise_for_status()  # will throw an error if the request failed
     return response.json()
 
-def fetch_all_pages(max_pages=5):
+def fetch_all_pages(max_pages=15):
     """
     max_pages caps how many pages we pull.
     """
@@ -54,7 +57,7 @@ def fetch_all_pages(max_pages=5):
     return all_results
 
 if __name__ == "__main__":
-    records = fetch_all_pages(max_pages=5)
+    records = fetch_all_pages(max_pages=15)
     print(f"\nTotal records pulled: {len(records)}")
 
     output_path = "data/raw/dod_awards_2024.json"

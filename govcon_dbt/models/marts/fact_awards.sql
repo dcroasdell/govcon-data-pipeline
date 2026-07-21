@@ -5,6 +5,9 @@
     ag.agency_id,
     t.time_id as start_time_id,
     a.award_amount,
+    a.pop_state,
+    a.award_description,
+    a.contract_award_type,
     a.naics_code,
     a.naics_description
 
